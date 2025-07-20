@@ -166,4 +166,37 @@ public class UserDAOImpl implements UserDAO{
 		
 		return exists;
 	}
+<<<<<<< HEAD
+
+	@Override
+	public User getUserDetailsByEmail(String email) {
+		User user=null;
+		String getquery="select * from user where email=?";
+		try( Connection con=Utility.requestConnection();
+				PreparedStatement pstmt=con.prepareStatement(getquery);   ){
+			
+			pstmt.setString(1, email);
+			ResultSet res=pstmt.executeQuery();
+			if(res.next()) {
+				int userid=res.getInt("userid");
+				String name=res.getString("name");
+				String username=res.getString("username");
+				String password=res.getString("password");
+				String email1=res.getString("email");
+				long phonenumber=res.getLong("phonenumber");
+				String address=res.getString("address");
+				String role=res.getString("role");
+				
+				user=new User(name, username, password, email1,phonenumber,address,role);
+				user.setUserId(userid);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		System.out.println(user.toString()+"UserUserUser    "+user.getUserId());
+		return user;
+	}
+=======
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 }

@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,61 @@ public class MenuDAOImpl implements MenuDAO{
 	String get_query="select * from menu where menuid=? ";
 	String update_query="update menu set restaurantid=? ,itemname=? , description=?, price=?, isavailable=?, ratings=?, imagepath=? where menuid=?";
 	String delete_query="delete from menu where menuid=?";
+	String getallmenusbyrestaurantid="select * from menu where restaurantid=?";
+	
+	public List<Menu> getAllMenusByRestaurantId(int restaurantid){
+		Connection con=Utility.requestConnection();
+		List<Menu> allmenusbyrestaurantid=new ArrayList<>();
+		
+		try {
+			PreparedStatement pstmt = con.prepareStatement(getallmenusbyrestaurantid);
+			pstmt.setInt(1, restaurantid);
+			//Statement st= con.createStatement();
+			ResultSet res = pstmt.executeQuery();
+			
+			while(res.next()) {
+				
+				int restaurantid1=res.getInt("restaurantid");
+				String itemname=res.getString("itemname");
+				String description=res.getString("description");
+				double price=res.getDouble("price");
+				boolean isavilable=res.getBoolean("isavailable");
+				double rating=res.getDouble("ratings");
+				String imagepath=res.getString("imagepath");
+				int menuid=res.getInt("menuid");
+				
+				Menu m1=new Menu(restaurantid1, itemname, description, price, isavilable, rating, imagepath);
+				m1.setMenuid(menuid);
+				allmenusbyrestaurantid.add(m1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return allmenusbyrestaurantid;
+	}
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+import com.foodApp.DAO.MenuDAO;
+import com.foodApp.models.Menu;
+import com.foodApp.utility.Utility;
+
+/*
+ * String itemname;
+	String description;
+	double price;
+	boolean isavailable;
+	double rating;
+	String imagepath;
+ */
+public class MenuDAOImpl implements MenuDAO{
+
+	String insert_query="insert into `menu` (restaurantid,itemname , description, price, isavailable, ratings, imagepath ) values(?,?,?,?,?,?,?)";
+	String get_query="select * from menu where menuid=? ";
+	String update_query="update menu set restaurantid=? ,itemname=? , description=?, price=?, isavailable=?, ratings=?, imagepath=? where menuid=?";
+	String delete_query="delete from menu where menuid=?";
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 	
 	@Override
 	public void addItemintoMenu(Menu menu) {

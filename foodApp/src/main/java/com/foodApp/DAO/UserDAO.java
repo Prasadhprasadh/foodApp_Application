@@ -11,4 +11,11 @@ public interface UserDAO {
 	void deleteUser(int userId);
 	void updateUserDetails(User user);
 	List<User>getAllUsers();
+<<<<<<< HEAD
+	
+	boolean checkEmailExists(String email);
+	User getUserDetailsByEmail(String email);
+
+=======
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 }

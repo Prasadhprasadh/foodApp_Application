@@ -2,6 +2,16 @@ package com.foodApp.models;
 
 public class Menu {
 
+<<<<<<< HEAD
+	private int menuid;
+	private int restaurantid;
+	private String itemname;
+	private  String description;
+	private double price;
+	private boolean isavailable;
+	private double rating;
+	private String imagepath;
+=======
 	int menuid;
 	int restaurantid;
 	String itemname;
@@ -10,6 +20,7 @@ public class Menu {
 	boolean isavailable;
 	double rating;
 	String imagepath;
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 	
 	public int getMenuid() {
 		return menuid;

@@ -105,6 +105,83 @@ public class RestaurantDAOImpl implements RestaurantDAO{
 				boolean isactive=res.getBoolean("isactive");
 				String imagepath=res.getString("imagepath");
 				
+<<<<<<< HEAD
+				restaurant=new Restaurant(name, address, phonenumber, cuisinetype,deliverytime ,adminuserid, rating, isactive, imagepath);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(pstmt !=null)pstmt.close();
+				if(con !=null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return restaurant;
+	}
+
+	@Override
+	public void updateRestaurantDetails(Restaurant restaurant) {
+		Connection con=Utility.requestConnection();
+		PreparedStatement pstmt=null;
+		try {
+			pstmt=con.prepareStatement(update_query);
+			
+			pstmt.setString(1, restaurant.getName());
+			pstmt.setString(2, restaurant.getAddress());
+			pstmt.setString(3, restaurant.getPhoneNumber());
+			pstmt.setString(4, restaurant.getCuisineType());
+			pstmt.setTimestamp(5, restaurant.getDeliveryTime());
+			pstmt.setInt(6, restaurant.getAdminUserId());
+			pstmt.setDouble(7, restaurant.getRating());
+			pstmt.setBoolean(8, restaurant.getisActive());
+			pstmt.setString(9, restaurant.getImagePath());
+			pstmt.setInt(10, restaurant.getRestaurantId());
+
+			int val=pstmt.executeUpdate();
+			System.out.println(val +" user details updated successfully ");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+	@Override
+	public List<Restaurant> getAllRestaurantsDetails() {
+		List<Restaurant> allusers = new ArrayList<>();
+		Connection con=Utility.requestConnection();
+		PreparedStatement pstmt=null;
+
+		try {
+			pstmt=con.prepareStatement(getAllUsers_query);
+			ResultSet res=pstmt.executeQuery();
+			
+			while(res.next()) {
+				int restaurantid=res.getInt("restaurantid");
+				String name=res.getString("name");
+				String address=res.getString("address");
+				String phonenumber=res.getString("phonenumber");
+				String cuisinetype=res.getString("cuisinetype");
+				Timestamp deliverytime=res.getTimestamp("deliverytime");
+				int adminuserid=res.getInt("adminUserId");
+				double rating=res.getDouble("rating");
+				boolean isactive=res.getBoolean("isactive");
+				String imagepath=res.getString("imagepath");
+				
+				Restaurant restaurant=new Restaurant(name, address, phonenumber, cuisinetype,deliverytime ,adminuserid, rating, isactive, imagepath);
+				restaurant.setRestaurantId(restaurantid);
+=======
 				restaurant=new Restaurant(name, address, phonenumber, cuisinetype, adminuserid, rating, isactive, imagepath);
 			}
 			
@@ -179,6 +256,7 @@ public class RestaurantDAOImpl implements RestaurantDAO{
 				String imagepath=res.getString("imagepath");
 				
 				Restaurant restaurant=new Restaurant(name, address, phonenumber, cuisinetype, adminuserid, rating, isactive, imagepath);
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 				allusers.add(restaurant);
 			}
 		} catch (SQLException e) {

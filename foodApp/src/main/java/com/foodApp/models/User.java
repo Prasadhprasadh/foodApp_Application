@@ -5,6 +5,18 @@ import java.util.Date;
 
 public class User {
 	
+<<<<<<< HEAD
+	private int userId;
+	private String name;
+	private String userName;
+	private String password;
+	private String email;
+	private long phoneNumber;
+	private String address;
+	private String role;
+	private Timestamp create_date;
+	private Timestamp last_login_date;
+=======
 	int userId;
 	String name;
 	String userName;
@@ -15,6 +27,7 @@ public class User {
 	String role;
 	Timestamp create_date;
 	Timestamp last_login_date;
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 	
 	public int getUserId() {
 		return userId;

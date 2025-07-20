@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Menu | FoodieApp</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      padding: 20px;
+    }
+
+    .restaurant-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .restaurant-header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.02);
+    }
+
+    .menu-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-info {
+      padding: 16px;
+    }
+
+    .menu-info h3 {
+      margin-bottom: 8px;
+      font-size: 1.3em;
+      color: #222;
+    }
+
+    .menu-info p {
+      color: #666;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .menu-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e53935;
+      font-size: 1.1em;
+    }
+
+    .rating {
+      background-color: #4caf50;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="restaurant-header">
+    <h1>Delicious Bites - Menu</h1>
+  </div>
+
+  <div class="menu-container">
+    <!-- Menu Item 1 -->
+    <div class="menu-card">
+      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger" class="menu-image">
+      <div class="menu-info">
+        <h3>Cheese Burger</h3>
+        <p>Juicy grilled beef patty with cheddar, lettuce, tomato, and special sauce.</p>
+        <div class="menu-bottom">
+          <span class="price">₹199</span>
+          <span class="rating">⭐ 4.5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Item 2 -->
+    <div class="menu-card">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza" class="menu-image">
+      <div class="menu-info">
+        <h3>Veggie Delight Pizza</h3>
+        <p>Crispy thin crust with bell peppers, olives, onions & mozzarella cheese.</p>
+        <div class="menu-bottom">
+          <span class="price">₹249</span>
+          <span class="rating">⭐ 4.2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Item 3 -->
+    <div class="menu-card">
+      <img src="https://source.unsplash.com/400x300/?biryani" alt="Biryani" class="menu-image">
+      <div class="menu-info">
+        <h3>Hyderabadi Biryani</h3>
+        <p>Spicy and flavorful basmati rice with marinated chicken and saffron.</p>
+        <div class="menu-bottom">
+          <span class="price">₹299</span>
+          <span class="rating">⭐ 4.7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Item 4 -->
+    <div class="menu-card">
+      <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta" class="menu-image">
+      <div class="menu-info">
+        <h3>Creamy Alfredo Pasta</h3>
+        <p>Penne pasta tossed in rich Alfredo sauce with mushrooms and herbs.</p>
+        <div class="menu-bottom">
+          <span class="price">₹229</span>
+          <span class="rating">⭐ 4.3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more items as needed -->
+  </div>
+
+</body>
+</html>

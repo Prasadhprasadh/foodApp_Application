@@ -2,11 +2,19 @@ package com.foodApp.models;
 
 public class OrderItem {
 
+<<<<<<< HEAD
+	private int orderitemid;
+	private int orderid;
+	private int menuid;
+	private int quantity;
+	private double totalamount;
+=======
 	int orderitemid;
 	int orderid;
 	int menuid;
 	int quantity;
 	double totalamount;
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 	
 	public int getOrderitemid() {
 		return orderitemid;

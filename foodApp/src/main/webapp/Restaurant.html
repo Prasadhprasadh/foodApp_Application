@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swiggy Style - Restaurant Listings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .navbar {
+      background-color: #fc8019;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px 40px;
+    }
+
+    .restaurant-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .restaurant-image {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .restaurant-info {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .restaurant-info h2 {
+      margin: 0 0 10px 0;
+    }
+
+    .restaurant-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .rating {
+      background-color: #48c479;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>FoodieApp</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </div>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Restaurant 1 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&h=300&fit=crop" alt="Spicy Treat">
+      <div class="restaurant-info">
+        <h2>Spicy Treat</h2>
+        <p>North Indian, Biryani</p>
+        <div class="restaurant-meta">
+          <span>ETA: 30 mins</span>
+          <span class="rating">4.3★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 2 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1589308078056-ebf93c1c47f6?w=400&h=300&fit=crop" alt="Pasta Palace">
+      <div class="restaurant-info">
+        <h2>Pasta Palace</h2>
+        <p>Italian, Pasta, Salads</p>
+        <div class="restaurant-meta">
+          <span>ETA: 25 mins</span>
+          <span class="rating">4.6★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 3 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1606788075761-8d993f4e4e3b?w=400&h=300&fit=crop" alt="Asian Fusion">
+      <div class="restaurant-info">
+        <h2>Asian Fusion</h2>
+        <p>Chinese, Thai, Sushi</p>
+        <div class="restaurant-meta">
+          <span>ETA: 40 mins</span>
+          <span class="rating">4.1★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 4 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1555992336-cae521f6ae2b?w=400&h=300&fit=crop" alt="The Grill House">
+      <div class="restaurant-info">
+        <h2>The Grill House</h2>
+        <p>BBQ, American, Steaks</p>
+        <div class="restaurant-meta">
+          <span>ETA: 35 mins</span>
+          <span class="rating">4.4★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 5 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop" alt="Bombay Burgers">
+      <div class="restaurant-info">
+        <h2>Bombay Burgers</h2>
+        <p>Fast Food, Burgers, Beverages</p>
+        <div class="restaurant-meta">
+          <span>ETA: 20 mins</span>
+          <span class="rating">4.2★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 6 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop" alt="Veggie Garden">
+      <div class="restaurant-info">
+        <h2>Veggie Garden</h2>
+        <p>Healthy, Vegan, Salads</p>
+        <div class="restaurant-meta">
+          <span>ETA: 22 mins</span>
+          <span class="rating">4.7★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 7 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1589307004391-3657baf507c3?w=400&h=300&fit=crop" alt="Desi Dhaba">
+      <div class="restaurant-info">
+        <h2>Desi Dhaba</h2>
+        <p>Punjabi, Paratha, Lassi</p>
+        <div class="restaurant-meta">
+          <span>ETA: 28 mins</span>
+          <span class="rating">4.0★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 8 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1606788075761-8d993f4e4e3b?w=400&h=300&fit=crop" alt="Wok & Roll">
+      <div class="restaurant-info">
+        <h2>Wok & Roll</h2>
+        <p>Asian, Chinese, Noodles</p>
+        <div class="restaurant-meta">
+          <span>ETA: 26 mins</span>
+          <span class="rating">4.5★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 9 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1604908177529-30922c3203f2?w=400&h=300&fit=crop" alt="Biryani Express">
+      <div class="restaurant-info">
+        <h2>Biryani Express</h2>
+        <p>Biryani, Kebab, Indian</p>
+        <div class="restaurant-meta">
+          <span>ETA: 24 mins</span>
+          <span class="rating">4.6★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restaurant 10 -->
+    <div class="restaurant-card">
+      <img class="restaurant-image" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=300&fit=crop" alt="Dessert Delight">
+      <div class="restaurant-info">
+        <h2>Dessert Delight</h2>
+        <p>Cakes, Ice Cream, Shakes</p>
+        <div class="restaurant-meta">
+          <span>ETA: 18 mins</span>
+          <span class="rating">4.8★</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

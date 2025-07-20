@@ -26,6 +26,11 @@ public class OrderItemDAOImpl implements OrderItemDAO{
 			
 			int val=pstmt.executeUpdate();
 			System.out.println("Inserted value succssfully "+val);
+<<<<<<< HEAD
+			
+			
+=======
+>>>>>>> branch 'main' of https://github.com/Prasadhprasadh/foodApp_Application
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
